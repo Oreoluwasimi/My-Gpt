@@ -17,7 +17,7 @@ export const MessageList = ({ messages, user}: MessageListProps) => {
     if (!user) {
         return (
             
-            <div className="flex flex-col flex-1 items-center justify-center">
+            <div className="flex flex-col flex-1  w-full h-auto items-center justify-center">
             
                 <p className="text-sm text-muted-foreground">
                     Please Login to continue

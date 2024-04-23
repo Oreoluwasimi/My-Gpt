@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import 'highlight.js/styles/dark.css'
 import React from "react";
+import { SpeechIcon } from "../speech-icon";
 
 interface ChatMessageProps {
    imageUrl: string;
@@ -25,7 +26,9 @@ export const ChatMessage = ({imageUrl, name, text}: ChatMessageProps) => {
                 </div>           
                 <div>
                 <Hint label="Copy" side="top" asChild>
-                    <CopyButton value={text || ""}/>
+                    <div>
+                        <CopyButton value={text || ""}/>
+                    </div>              
                 </Hint>
                 </div>
             </div>
@@ -35,6 +38,7 @@ export const ChatMessage = ({imageUrl, name, text}: ChatMessageProps) => {
                     rehypePlugins={[rehypeHighlight]}
                 />
             </div>
+            <SpeechIcon textToRead={text}/>
             </div>
         )
        

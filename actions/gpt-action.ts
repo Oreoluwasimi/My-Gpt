@@ -27,7 +27,7 @@ export interface OllamaResponse{
     myHeaders.append("Content-Type", "application/json");
   
     const requestBody: RequestBody = {
-      model: "tinyllama",
+      model: "llama3:8b",
       prompt: text,
       stream: false,
       context: context

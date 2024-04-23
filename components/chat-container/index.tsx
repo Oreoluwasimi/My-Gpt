@@ -7,10 +7,17 @@ import { getUserData } from '@/app/authUtils/getUser';
 import { IMessage } from '@/app/interfaces/message';
 import { fetchGPTResponse } from '@/actions/gpt-action';
 
+interface MessageType {
+    user: string;
+    text: string;
+    picture: string;
+  }
+  
+
 
 export const ChatContainer = () => {
 
-    const [messages, setMessages] = useState([]);
+    const [messages, setMessages] = useState<MessageType[]>([]);
 
     const [user, setUser] = useState<any>(null);
     const [textInput, setTextInput] = useState<string>('');
