@@ -27,12 +27,14 @@ export const MessageList = ({ messages, user}: MessageListProps) => {
 
     }
 
+
     return (
         <div className="flex flex-1 flex-col w-full h-auto">
         {messages.map((message) => (
              <ChatMessage 
             imageUrl={message.picture} name={message.user} text={message.text}
              />
+
         ))}         
     </div>
     )

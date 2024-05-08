@@ -16,7 +16,7 @@ interface ChatMessageProps {
   
 export const ChatMessage = ({imageUrl, name, text}: ChatMessageProps) => {
 
-    if(name === "Chat-GPT") {
+    if(name === "My-GPT") {
         return (
             <div className="flex flex-col p-6 pb-10 gap-4 bg-accent" >
             <div className="flex justify-between">
